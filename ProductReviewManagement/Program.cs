@@ -36,7 +36,8 @@ namespace ProductReviewManagement
                 new ProductReview() { ProducID = 25, UserID = 3, Rating = 3, Review = "Bad", isLike = true }
                 };
             Manager manager = new Manager();
-            manager.TopRecords(listOfProducts);
+            //manager.TopRecords(listOfProducts);
+            manager.SelectedRecords(listOfProducts);
         }
     }
 }
