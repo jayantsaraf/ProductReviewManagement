@@ -8,7 +8,7 @@ namespace ProductReviewManagement
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Product Review Management Program");
-            List<ProductReview> products = new List<ProductReview>() {
+            List<ProductReview> listOfProducts = new List<ProductReview>() {
                 new ProductReview() { ProducID = 1, UserID = 1, Rating = 2, Review = "Good", isLike = true },
                 new ProductReview() { ProducID = 2, UserID = 2, Rating = 4, Review = "Good", isLike = true },
                 new ProductReview() { ProducID = 3, UserID = 1, Rating = 5, Review = "Good", isLike = true },
@@ -34,7 +34,9 @@ namespace ProductReviewManagement
                 new ProductReview() { ProducID = 22, UserID = 5, Rating = 10, Review = "Nice", isLike = true },
                 new ProductReview() { ProducID = 22, UserID = 4, Rating = 8, Review = "Good", isLike = true },
                 new ProductReview() { ProducID = 25, UserID = 3, Rating = 3, Review = "Bad", isLike = true }
-                }
+                };
+            Manager manager = new Manager();
+            manager.TopRecords(listOfProducts);
         }
     }
 }
