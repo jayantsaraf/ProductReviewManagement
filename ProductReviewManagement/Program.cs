@@ -37,7 +37,8 @@ namespace ProductReviewManagement
                 };
             Manager manager = new Manager();
             //manager.TopRecords(listOfProducts);
-            manager.SelectedRecords(listOfProducts);
+            //manager.SelectedRecords(listOfProducts);
+            manager.RetrieveCount(listOfProducts);
         }
     }
 }
