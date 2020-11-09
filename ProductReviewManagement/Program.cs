@@ -39,7 +39,8 @@ namespace ProductReviewManagement
             //manager.TopRecords(listOfProducts);
             //manager.SelectedRecords(listOfProducts);
             //manager.RetrieveCount(listOfProducts);
-            manager.RetrieveProductIDandReview(listOfProducts);
+            //manager.RetrieveProductIDandReview(listOfProducts);
+            manager.SkipFirstFiveRecords(listOfProducts);
         }
     }
 }
