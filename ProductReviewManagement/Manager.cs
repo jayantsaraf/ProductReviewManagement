@@ -90,6 +90,31 @@ namespace ProductReviewManagement
             }
 
         }
+        /// <summary>
+        /// UC5: Retrieve Product ID and Review Only
+        /// </summary>
+        /// <param name="listProductReview"></param>
+        public void RetrieveProductIDandReview(List<ProductReview> listProductReview)
+        {
+            try
+            {
+                var recordedData = from productReviews in listProductReview
+                                   select new
+                                   {
+                                       productReviews.ProducID,
+                                       productReviews.Review
+                                   };
+                ////Retrieve Data
+                foreach (var list in recordedData)
+                {
+                    Console.WriteLine("Product ID:- " + list.ProducID + " " + "Review: " + list.Review);
+                }
+            }
+            ////Catch exception if any:
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
 
-    }
+            }
+        }
 }
